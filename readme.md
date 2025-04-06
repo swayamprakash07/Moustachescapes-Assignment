@@ -1,6 +1,6 @@
 # 🧭 Location-Based Property Search API
 
-This is a Flask-based backend service built for *Moustache Escapes* to help their tele-calling team find the nearest available property based on user input (which may include spelling mistakes or partial information).
+This is a Flask-based backend service built for _Moustache Escapes_ to help their tele-calling team find the nearest available property based on user input (which may include spelling mistakes or partial information).
 
 The service takes a location query, geocodes it using the Mapbox API, and returns a list of Moustache properties within a 50 km radius.
 
@@ -19,15 +19,17 @@ The service takes a location query, geocodes it using the Mapbox API, and return
 
 ## 🧪 Example Use Case
 
-*Input:*
-json
+**Input:**
+
+```json
 {
   "address": "delih"
 }
+```
 
+**Output:**
 
-*Output:*
-json
+```json
 {
   "inputLocation": {
     "lat": 28.61,
@@ -41,43 +43,49 @@ json
     }
   ]
 }
-
+```
 
 ---
 
 ## 🛠 Setup Instructions
 
 ### 1. Clone the Repository
-bash
-git clone https://github.com/swayamprakash07/Moustachescapes-Assignment.git
 
+```bash
+git clone https://github.com/swayamprakash07/Moustachescapes-Assignment.git
+```
 
 ### 2. Create a Virtual Environment
-bash
-python -m venv venv
-source venv/bin/activate  # macOS/Linux
-venv\Scripts\activate     # Windows
 
+```bash
+python -m venv venv
+# For macOS/Linux
+source venv/bin/activate
+# For Windows
+venv\Scripts\activate
+```
 
 ### 3. Install Dependencies
-bash
-pip install -r requirements.txt
 
+```bash
+pip install -r requirements.txt
+```
 
 ### 4. Add Your .env File
-Create a .env file in the root directory:
 
-env
+Create a `.env` file in the root directory:
+
+```env
 MAPBOX_API_KEY=your_mapbox_access_token_here
-
+```
 
 ---
 
 ## ▶ Running the Server
 
-bash
+```bash
 python main.py
-
+```
 
 The API will be live at:  
 **http://localhost:3000/geocode**
@@ -86,14 +94,14 @@ The API will be live at:
 
 ## 📦 Project Structure
 
-
+```
 .
 ├── data.py               # List of Moustache property locations
 ├── main.py               # Main Flask app with geocoding API
 ├── requirements.txt      # Python dependencies
 ├── .env                  # Environment file (not committed)
 └── README.md             # You are here
-
+```
 
 ---
 
@@ -112,24 +120,3 @@ The API will be live at:
 - Mapbox API Key (free account available)
 
 ---
-
-## 🛡 Security Notes
-
-- Never commit your .env file!
-- Always add .env to your .gitignore.
-
----
-
-## 👥 Contributors
-
-- [Your Name](https://github.com/your-username)
-
----
-
-## 📄 License
-
-MIT License — free to use, share, and modify.
-
----
-
-> Built with ❤ for Formi's SDE Assignment — powered by Flask + Mapbox
